@@ -273,7 +273,7 @@ export default function HeroCarousel({ onSelectSlideCta }) {
                     flexDirection: 'column',
                     alignItems: 'center',
                     transformOrigin: 'top center',
-                    animation: 'cradleBall0 2.6s infinite',
+                    animation: 'cradleBall0 3.2s infinite linear',
                     marginRight: '2px'
                   }}
                 >
@@ -347,7 +347,7 @@ export default function HeroCarousel({ onSelectSlideCta }) {
                           flexDirection: 'column',
                           alignItems: 'center',
                           transformOrigin: 'top center',
-                          animation: `cradleBall${idx + 1} 2.6s infinite`
+                          animation: `cradleBall${idx + 1} 3.2s infinite linear`
                         }}
                       >
                         {/* String */}
@@ -1583,108 +1583,214 @@ export default function HeroCarousel({ onSelectSlideCta }) {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-8px); }
         }
-        /* Newton's Cradle Reciprocal Wave: Right-to-Left, then Left-to-Right */
-        /* Ball 6 (Travel - Rightmost): Starts at right peak, swings in right-to-left */
-        @keyframes cradleBall6 {
+        /* Newton's Wave: ONE BY ONE LEFT TO RIGHT, then RIGHT TO LEFT */
+
+        /* Ball 0 (Leftmost PaisaGo Coin 'पै'): Initiates left swing, then catches return */
+        @keyframes cradleBall0 {
           0% {
-            transform: rotate(28deg);
-            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transform: rotate(0deg);
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
+          4% {
+            transform: rotate(-26deg);
+            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          }
+          8% {
+            transform: rotate(0deg);
+          }
+          8.01%, 84% {
+            transform: rotate(0deg);
+          }
+          84.01% {
+            transform: rotate(0deg);
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
+          92% {
+            transform: rotate(-26deg);
+            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+
+        /* Ball 1 (Emergency): Swings right 8-14%, then swings left 78-84% */
+        @keyframes cradleBall1 {
+          0%, 8% {
+            transform: rotate(0deg);
+          }
+          8.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          11% {
+            transform: rotate(12deg);
+            animation-timing-function: ease-in;
           }
           14% {
             transform: rotate(0deg);
           }
-          15%, 82% {
+          14.01%, 78% {
             transform: rotate(0deg);
           }
-          83% {
+          78.01% {
             transform: rotate(0deg);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: ease-out;
           }
-          92% {
-            transform: rotate(28deg);
+          81% {
+            transform: rotate(-12deg);
+            animation-timing-function: ease-in;
           }
-          100% {
-            transform: rotate(28deg);
+          84%, 100% {
+            transform: rotate(0deg);
           }
         }
 
-        /* Ball 5 (Education): Swings left, then right */
-        @keyframes cradleBall5 {
-          0%, 12% { transform: rotate(0deg); }
-          14% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          18% { transform: rotate(-13deg); animation-timing-function: ease-in; }
-          22% { transform: rotate(0deg); }
-          23%, 76% { transform: rotate(0deg); }
-          77% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          81% { transform: rotate(13deg); animation-timing-function: ease-in; }
-          85%, 100% { transform: rotate(0deg); }
-        }
-
-        /* Ball 4 (Upskilling): Swings left, then right */
-        @keyframes cradleBall4 {
-          0%, 16% { transform: rotate(0deg); }
-          17% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          21% { transform: rotate(-11deg); animation-timing-function: ease-in; }
-          25% { transform: rotate(0deg); }
-          26%, 72% { transform: rotate(0deg); }
-          73% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          77% { transform: rotate(11deg); animation-timing-function: ease-in; }
-          81%, 100% { transform: rotate(0deg); }
-        }
-
-        /* Ball 3 (Medical): Swings left, then right */
-        @keyframes cradleBall3 {
-          0%, 20% { transform: rotate(0deg); }
-          21% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          25% { transform: rotate(-10deg); animation-timing-function: ease-in; }
-          29% { transform: rotate(0deg); }
-          30%, 68% { transform: rotate(0deg); }
-          69% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          73% { transform: rotate(10deg); animation-timing-function: ease-in; }
-          77%, 100% { transform: rotate(0deg); }
-        }
-
-        /* Ball 2 (Home): Swings left, then right */
+        /* Ball 2 (Home): Swings right 14-20%, then swings left 72-78% */
         @keyframes cradleBall2 {
-          0%, 24% { transform: rotate(0deg); }
-          25% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          29% { transform: rotate(-11deg); animation-timing-function: ease-in; }
-          33% { transform: rotate(0deg); }
-          34%, 64% { transform: rotate(0deg); }
-          65% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          69% { transform: rotate(11deg); animation-timing-function: ease-in; }
-          73%, 100% { transform: rotate(0deg); }
+          0%, 14% {
+            transform: rotate(0deg);
+          }
+          14.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          17% {
+            transform: rotate(12deg);
+            animation-timing-function: ease-in;
+          }
+          20% {
+            transform: rotate(0deg);
+          }
+          20.01%, 72% {
+            transform: rotate(0deg);
+          }
+          72.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          75% {
+            transform: rotate(-12deg);
+            animation-timing-function: ease-in;
+          }
+          78%, 100% {
+            transform: rotate(0deg);
+          }
         }
 
-        /* Ball 1 (Emergency): Swings left to coin, then back right */
-        @keyframes cradleBall1 {
-          0%, 28% { transform: rotate(0deg); }
-          29% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          33% { transform: rotate(-13deg); animation-timing-function: ease-in; }
-          37% { transform: rotate(0deg); }
-          38%, 60% { transform: rotate(0deg); }
-          61% { transform: rotate(0deg); animation-timing-function: ease-out; }
-          65% { transform: rotate(13deg); animation-timing-function: ease-in; }
-          69%, 100% { transform: rotate(0deg); }
+        /* Ball 3 (Medical): Swings right 20-26%, then swings left 66-72% */
+        @keyframes cradleBall3 {
+          0%, 20% {
+            transform: rotate(0deg);
+          }
+          20.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          23% {
+            transform: rotate(12deg);
+            animation-timing-function: ease-in;
+          }
+          26% {
+            transform: rotate(0deg);
+          }
+          26.01%, 66% {
+            transform: rotate(0deg);
+          }
+          66.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          69% {
+            transform: rotate(-12deg);
+            animation-timing-function: ease-in;
+          }
+          72%, 100% {
+            transform: rotate(0deg);
+          }
         }
 
-        /* Ball 0 (PaisaGo Coin 'पै' - Leftmost): Takes momentum, swings out to left */
-        @keyframes cradleBall0 {
-          0%, 35% {
+        /* Ball 4 (Upskilling): Swings right 26-32%, then swings left 60-66% */
+        @keyframes cradleBall4 {
+          0%, 26% {
             transform: rotate(0deg);
           }
-          36% {
+          26.01% {
             transform: rotate(0deg);
-            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: ease-out;
           }
-          48% {
-            transform: rotate(-28deg);
-            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          29% {
+            transform: rotate(12deg);
+            animation-timing-function: ease-in;
           }
-          59% {
+          32% {
             transform: rotate(0deg);
+          }
+          32.01%, 60% {
+            transform: rotate(0deg);
+          }
+          60.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          63% {
+            transform: rotate(-12deg);
+            animation-timing-function: ease-in;
+          }
+          66%, 100% {
+            transform: rotate(0deg);
+          }
+        }
+
+        /* Ball 5 (Education): Swings right 32-38%, then swings left 54-60% */
+        @keyframes cradleBall5 {
+          0%, 32% {
+            transform: rotate(0deg);
+          }
+          32.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          35% {
+            transform: rotate(13deg);
+            animation-timing-function: ease-in;
+          }
+          38% {
+            transform: rotate(0deg);
+          }
+          38.01%, 54% {
+            transform: rotate(0deg);
+          }
+          54.01% {
+            transform: rotate(0deg);
+            animation-timing-function: ease-out;
+          }
+          57% {
+            transform: rotate(-13deg);
+            animation-timing-function: ease-in;
           }
           60%, 100% {
+            transform: rotate(0deg);
+          }
+        }
+
+        /* Ball 6 (Travel - Rightmost End Ball): Takes full impulse, swings out 38-54% */
+        @keyframes cradleBall6 {
+          0%, 38% {
+            transform: rotate(0deg);
+          }
+          38.01% {
+            transform: rotate(0deg);
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
+          46% {
+            transform: rotate(26deg);
+            animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          }
+          54% {
+            transform: rotate(0deg);
+          }
+          54.01%, 100% {
             transform: rotate(0deg);
           }
         }
