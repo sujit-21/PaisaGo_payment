@@ -1,0 +1,863 @@
+/* ==========================================================================
+   PAISAGO — COMPREHENSIVE RESPONSIVE DESIGN SYSTEM
+   Breakpoints:
+     • Mobile small:  max-width 480px
+     • Mobile:        max-width 768px
+     • Tablet:        max-width 1024px
+     • Desktop:       min-width 1025px (default)
+   ========================================================================== */
+
+/* ===================== TABLET ( ≤ 1024px ) ===================== */
+@media (max-width: 1024px) {
+
+  /* --- Announcement Bar --- */
+  .paisago-app > div:first-child {
+    font-size: 12px !important;
+    padding: 7px 12px !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  /* --- Navbar height --- */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* --- Hero Carousel --- */
+  .hero-carousel-section {
+    min-height: 460px !important;
+  }
+
+  .hero-slide-content {
+    padding: 30px 20px 24px !important;
+    min-height: 440px !important;
+  }
+
+  /* --- ServiceTabs wealth grid --- */
+  .pp-wealth-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* --- Footer grid --- */
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  /* --- Modal sizing --- */
+  .recharge-modal-card,
+  .company-modal-card,
+  .travel-modal-card,
+  .feature-modal-card,
+  .merchant-modal-card {
+    max-width: 90vw !important;
+    max-height: 85vh !important;
+  }
+}
+
+/* ===================== MOBILE ( ≤ 768px ) ===================== */
+@media (max-width: 768px) {
+
+  /* --- Global Container --- */
+  .container {
+    padding: 0 16px !important;
+  }
+
+  /* --- Announcement Bar --- */
+  .paisago-app > div:first-child {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    line-height: 1.4 !important;
+  }
+  .paisago-app > div:first-child span:last-of-type {
+    display: none;
+  }
+
+  /* --- Navbar --- */
+  .navbar-header {
+    height: 60px !important;
+  }
+
+  .navbar-logo-text {
+    font-size: 22px !important;
+  }
+
+  .navbar-download-btn {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+  }
+  .navbar-download-btn span {
+    display: none !important;
+  }
+
+  /* --- Hero Carousel --- */
+  .hero-carousel-section {
+    min-height: auto !important;
+  }
+
+  .hero-slide-content {
+    padding: 24px 16px 20px !important;
+    min-height: auto !important;
+  }
+
+  .hero-title {
+    font-size: 26px !important;
+  }
+
+  .hero-highlight {
+    font-size: 22px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 13px !important;
+  }
+
+  /* Newton's Cradle */
+  .cradle-visual {
+    height: 180px !important;
+    margin: 0 !important;
+  }
+
+  .cradle-container {
+    gap: 4px !important;
+  }
+
+  .cradle-string {
+    height: 70px !important;
+  }
+
+  .cradle-coin {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .cradle-coin-logo {
+    font-size: 24px !important;
+  }
+
+  .cradle-sphere {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .cradle-sphere-col {
+    width: 48px !important;
+  }
+
+  .cradle-sphere-label {
+    font-size: 10px !important;
+  }
+
+  /* POS visual */
+  .pos-visual-area {
+    height: 200px !important;
+  }
+
+  .pos-stage-ring-outer {
+    width: 340px !important;
+    height: 120px !important;
+  }
+
+  .pos-stage-ring-inner {
+    width: 240px !important;
+    height: 80px !important;
+  }
+
+  .pos-floating-pill {
+    left: 4% !important;
+    top: 20% !important;
+    transform: scale(0.85) !important;
+  }
+
+  .pos-cake-graphic,
+  .pos-headphones-graphic {
+    display: none !important;
+  }
+
+  .pos-credit-card {
+    display: none !important;
+  }
+
+  /* PG Dashboard (Slide 3) */
+  .pg-dashboard-container {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 16px !important;
+  }
+
+  .pg-screen-col {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .pg-side-metrics {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
+  }
+
+  .pg-side-metrics > div {
+    min-width: 140px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* SIP Pyramid (Slide 4) */
+  .sip-pyramid-area {
+    height: 220px !important;
+  }
+
+  .sip-row {
+    gap: 6px !important;
+  }
+
+  .sip-block {
+    width: 56px !important;
+    height: 48px !important;
+    border-radius: 10px !important;
+    padding: 4px !important;
+  }
+
+  .sip-block-label {
+    font-size: 8px !important;
+  }
+
+  .sip-block-value {
+    font-size: 10px !important;
+  }
+
+  /* SBI Card (Slide 5) */
+  .sbi-card-area {
+    height: auto !important;
+    min-height: 250px !important;
+  }
+
+  .sbi-card-visual {
+    width: 260px !important;
+    height: 160px !important;
+  }
+
+  .sbi-card-visual-large {
+    width: 280px !important;
+    height: 170px !important;
+  }
+
+  /* Slide Nav Controls */
+  .slide-nav-arrow {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .slide-nav-arrow svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  /* Slide bottom QR card */
+  .slide-qr-card {
+    padding: 6px 12px !important;
+    gap: 8px !important;
+  }
+
+  /* Slide dots */
+  .slide-dots-row {
+    gap: 6px !important;
+    margin-top: 12px !important;
+  }
+
+  /* --- Service Tabs (Section 2) --- */
+  .pp-wealth-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .wealth-tab-card {
+    padding: 14px 14px !important;
+  }
+
+  .service-tab-headline {
+    font-size: 24px !important;
+  }
+
+  .service-tab-slider {
+    gap: 12px !important;
+  }
+
+  .service-tab-slider-card {
+    min-width: 240px !important;
+    flex: 0 0 240px !important;
+  }
+
+  /* --- Secure Transactions (Section 3) --- */
+  .secure-txn-section {
+    padding: 40px 0 !important;
+  }
+
+  .secure-txn-header h2 {
+    font-size: 24px !important;
+  }
+
+  .secure-txn-marquee-pill {
+    padding: 8px 14px !important;
+  }
+
+  /* --- Bill Recharge Grid (Section 4) --- */
+  .recharge-section {
+    padding: 40px 0 !important;
+  }
+
+  .recharge-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .recharge-toggle {
+    align-self: flex-start !important;
+  }
+
+  .recharge-grid-full {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  /* --- Travel & Commute (Section 5) --- */
+  .travel-tabs-row {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .travel-tab-btn {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+  }
+
+  .travel-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .travel-box-inner {
+    padding: 24px 16px !important;
+  }
+
+  .travel-hero-top {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  /* Hotel cards */
+  .hotel-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* --- International Section (Section 6) --- */
+  .intl-section {
+    padding: 40px 0 !important;
+  }
+
+  .intl-country-picker {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .intl-country-btn {
+    font-size: 12px !important;
+    padding: 7px 12px !important;
+  }
+
+  .intl-map-area {
+    height: 240px !important;
+  }
+
+  .intl-detail-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .intl-detail-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .intl-receipt-card {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* --- Safe Payments Section (Section 7) --- */
+  .safe-payments-section {
+    padding: 40px 0 !important;
+  }
+
+  .safe-payments-carousel {
+    gap: 12px !important;
+  }
+
+  .safe-story-card {
+    min-width: 260px !important;
+    width: 260px !important;
+    height: 340px !important;
+  }
+
+  /* --- Smart Savings Stadium (Section 8) --- */
+  .savings-stadium-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .savings-stadium-section {
+    padding: 40px 0 !important;
+  }
+
+  /* --- Smart Devices (Section 9) --- */
+  .isometric-hardware-arena {
+    height: auto !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+    padding: 30px 16px !important;
+  }
+
+  .device-isometric-unit {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+
+  .smart-devices-section {
+    padding: 40px 0 !important;
+  }
+
+  .device-detail-card {
+    padding: 24px 16px !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .device-detail-graphic {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  .device-detail-content {
+    max-width: 100% !important;
+  }
+
+  /* --- Business Solutions (Section 10) --- */
+  .business-stadium-card {
+    padding: 28px 16px !important;
+    border-radius: 24px !important;
+  }
+
+  .biz-tab-row {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .biz-tab-btn {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+  }
+
+  .biz-tab-content-anim {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .biz-content-col {
+    max-width: 100% !important;
+  }
+
+  .biz-graphic-col {
+    width: 100% !important;
+    height: 220px !important;
+  }
+
+  .biz-features-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* --- PaisaGo Group Orbit (Section 11) --- */
+  .orbit-visual-area {
+    height: 260px !important;
+  }
+
+  .orbit-container {
+    transform: scale(0.65) !important;
+  }
+
+  .orbit-section {
+    padding: 40px 0 !important;
+  }
+
+  /* --- Pulse Section (Section 12) --- */
+  .pulse-section {
+    padding: 40px 0 !important;
+  }
+
+  .pulse-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .pulse-map-container {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .pulse-map-graphic {
+    width: 100% !important;
+    height: 240px !important;
+  }
+
+  .pulse-live-feed {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* --- App Download Banner (Section 13) --- */
+  .download-box-inner {
+    padding: 28px 16px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 20px !important;
+  }
+
+  .download-text h2 {
+    font-size: 24px !important;
+  }
+
+  .download-qr-area {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* --- Footer --- */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .footer-certifications {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  /* --- All Modals --- */
+  .modal-overlay {
+    padding: 12px !important;
+  }
+
+  .modal-card {
+    max-width: 100% !important;
+    max-height: 90vh !important;
+    border-radius: 20px !important;
+    padding: 24px 16px !important;
+  }
+
+  /* --- QR Download Modal --- */
+  .qr-modal-card {
+    padding: 24px 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .qr-modal-card svg {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+
+/* ===================== SMALL MOBILE ( ≤ 480px ) ===================== */
+@media (max-width: 480px) {
+
+  /* --- Announcement Bar: even more compact --- */
+  .paisago-app > div:first-child {
+    font-size: 10px !important;
+    padding: 5px 8px !important;
+    gap: 4px !important;
+  }
+  .paisago-app > div:first-child a {
+    display: none !important;
+  }
+
+  /* --- Navbar --- */
+  .navbar-header {
+    height: 54px !important;
+  }
+
+  .navbar-logo-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .navbar-logo-text {
+    font-size: 20px !important;
+  }
+
+  .navbar-download-btn {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+    gap: 4px !important;
+  }
+
+  /* --- Hero Carousel --- */
+  .hero-slide-content {
+    padding: 20px 12px 16px !important;
+  }
+
+  .hero-title {
+    font-size: 22px !important;
+  }
+
+  .hero-highlight {
+    font-size: 19px !important;
+  }
+
+  .hero-pretitle {
+    font-size: 12px !important;
+  }
+
+  /* Cradle even smaller */
+  .cradle-visual {
+    height: 150px !important;
+  }
+
+  .cradle-string {
+    height: 55px !important;
+  }
+
+  .cradle-coin {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .cradle-coin-logo {
+    font-size: 20px !important;
+  }
+
+  .cradle-sphere {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .cradle-sphere-col {
+    width: 42px !important;
+  }
+
+  .cradle-sphere-label {
+    font-size: 9px !important;
+    margin-top: 6px !important;
+  }
+
+  .cradle-sphere svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  /* --- Service Tabs --- */
+  .pp-wealth-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .wealth-tab-card {
+    padding: 12px 10px !important;
+    border-radius: 14px !important;
+    gap: 8px !important;
+  }
+
+  .wealth-tab-card .tab-title {
+    font-size: 13px !important;
+  }
+
+  .wealth-tab-card .tab-subtitle {
+    font-size: 10px !important;
+  }
+
+  .service-tab-headline {
+    font-size: 20px !important;
+  }
+
+  .service-tab-slider-card {
+    min-width: 220px !important;
+    flex: 0 0 220px !important;
+  }
+
+  .service-tab-slider-scroll-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  /* --- Bill Recharge Grid --- */
+  .recharge-grid-full {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .marquee-pill {
+    padding: 8px 12px !important;
+    gap: 8px !important;
+    border-radius: 12px !important;
+  }
+
+  .marquee-pill span {
+    font-size: 12px !important;
+  }
+
+  /* --- Travel --- */
+  .travel-tab-btn {
+    font-size: 11px !important;
+    padding: 7px 10px !important;
+  }
+
+  /* --- International --- */
+  .intl-map-area {
+    height: 180px !important;
+  }
+
+  .intl-country-btn {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* --- Safe Payments --- */
+  .safe-story-card {
+    min-width: 230px !important;
+    width: 230px !important;
+    height: 300px !important;
+  }
+
+  /* --- Smart Savings --- */
+  .savings-stadium-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* --- Smart Devices --- */
+  .device-detail-graphic {
+    height: 160px !important;
+  }
+
+  /* --- Business Solutions --- */
+  .business-stadium-card {
+    padding: 20px 14px !important;
+    border-radius: 20px !important;
+  }
+
+  .biz-graphic-col {
+    height: 180px !important;
+  }
+
+  /* --- PaisaGo Group Orbit --- */
+  .orbit-visual-area {
+    height: 200px !important;
+  }
+
+  .orbit-container {
+    transform: scale(0.5) !important;
+  }
+
+  /* --- Pulse --- */
+  .pulse-stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .pulse-map-graphic {
+    height: 200px !important;
+  }
+
+  /* --- Footer --- */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .footer-certifications {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  .footer-certifications span:nth-child(even) {
+    display: none !important;
+  }
+
+  /* --- Modals even smaller --- */
+  .modal-card {
+    padding: 20px 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .qr-modal-card {
+    padding: 20px 16px !important;
+  }
+
+  .qr-modal-card svg {
+    width: 130px !important;
+    height: 130px !important;
+  }
+}
+
+
+/* ===================== LANDSCAPE PHONES ===================== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-carousel-section {
+    min-height: 340px !important;
+  }
+
+  .hero-slide-content {
+    min-height: 320px !important;
+    padding: 16px 20px !important;
+  }
+
+  .cradle-visual {
+    height: 140px !important;
+  }
+
+  .cradle-string {
+    height: 50px !important;
+  }
+
+  .modal-overlay {
+    padding: 8px !important;
+  }
+
+  .modal-card {
+    max-height: 95vh !important;
+  }
+}
+
+
+/* ===================== HELPER: TOUCH-FRIENDLY TARGETS ===================== */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger tap targets on touch devices */
+  .marquee-pill,
+  .wealth-tab-card,
+  .travel-tab-btn,
+  .intl-country-btn,
+  .biz-tab-btn {
+    min-height: 44px !important;
+  }
+
+  /* Disable hover-transform effects on touch */
+  .marquee-pill:hover,
+  .wealth-tab-card:hover {
+    transform: none !important;
+  }
+}

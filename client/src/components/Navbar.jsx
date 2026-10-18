@@ -448,10 +448,11 @@ export default function Navbar({
           transition: 'all 0.25s ease'
         }}
       >
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px' }}>
+        <div className="container navbar-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px' }}>
           {/* Logo */}
           <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
             <div
+              className="navbar-logo-icon"
               style={{
                 width: '38px',
                 height: '38px',
@@ -468,6 +469,7 @@ export default function Navbar({
             </div>
             <div style={{ display: 'flex', alignItems: 'baseline' }}>
               <span
+                className="navbar-logo-text"
                 style={{
                   fontFamily: "'Outfit', sans-serif",
                   fontWeight: 900,
@@ -899,7 +901,7 @@ export default function Navbar({
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <button
               onClick={onOpenQr}
-              className="btn-primary"
+              className="btn-primary navbar-download-btn"
               style={{ fontSize: '14px', padding: '10px 22px' }}
             >
               <QrCode size={18} />
